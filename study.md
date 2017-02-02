@@ -89,8 +89,8 @@ Create an object literal named `vega` with the following properties and values.
 
 ```javascript
 let vega = {
-  distance: 25.04
-  solarMas: 2.135
+  distance: 25.04;
+  solarMas: 2.135;
 }
 ```
 
