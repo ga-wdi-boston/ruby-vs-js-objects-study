@@ -41,7 +41,7 @@ Does `proxima_centauri.print_distance` run? Why or why not? If so, then what is
 the output? If not, then how can it be fixed?
 
 ```md
-<!-- your answer here -->
+Yes it does, because @distance_km is an instance variable and with the interpolation it will print out the whole string with the calculated distance. The distance outputed would be 4.246 * 9_460_730_472_580.8.
 ```
 
 ## Ruby Object Variables: Part II
@@ -50,7 +50,7 @@ Does `proxima_centauri.print_mass` run? Why or why not? If so, then what is the
 output? If not, then how can it be fixed?
 
 ```md
-<!-- your answer here -->
+No, because mass_kg is not an instance variable, but instead it is a local variable. One can only see the value of it withi the initialize scope.
 ```
 
 ## Ruby Object Equality: Part I
@@ -66,7 +66,7 @@ nearest_star = the_sun
 Will modifying `sol` affect `the_sun`? Why or why not?
 
 ```md
-<!-- your answer here -->
+No, because the variable sol and the_sun is a different instance of the class Star. Changing sol will not have an affect on the variable the_sun.
 ```
 
 ## Ruby Object Equality: Part II
@@ -74,7 +74,7 @@ Will modifying `sol` affect `the_sun`? Why or why not?
 Will modifying `the_sun` affect `nearest_star`? Why or why not?
 
 ```md
-<!-- your answer here -->
+Yes, becuase nearest_star is pointing to the value of the_sun. So whatever is changed in the_sun will change nearest_star.
 ```
 
 ## JavaScript Objects
@@ -87,7 +87,10 @@ Create an object literal named `vega` with the following properties and values.
 | solarMass | 2.135 |
 
 ```javascript
-// your answer here
+const vega = {
+  distance: 25.04,
+  solarMass: 2.135
+};
 ```
 
 ## Ruby vs. JavaScript
@@ -96,5 +99,5 @@ If, in the above code, `var`, `let`, or `const` were removed and the code were
 executed as Ruby code, what type of object will be created?
 
 ```md
-<!-- your answer here -->
+a Hash will be created.
 ```
