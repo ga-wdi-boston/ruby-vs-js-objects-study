@@ -98,5 +98,5 @@ If, in the above code, `var`, `let`, or `const` were removed and the code were
 executed as Ruby code, what type of object will be created?
 
 ```md
-it would be a class
+it would be a class.
 ```
