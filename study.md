@@ -41,7 +41,7 @@ Does `proxima_centauri.print_distance` run? Why or why not? If so, then what is
 the output? If not, then how can it be fixed?
 
 ```md
-<!-- It should print, becuase the proxima has been declared as a star under the object. Thus assuming that is that case then print_distance will see the distance when it calls #{@distance_km}-->
+<!--They will not print because the attributes are private.-->
 ```
 
 ## Ruby Object Variables: Part II
@@ -50,7 +50,7 @@ Does `proxima_centauri.print_mass` run? Why or why not? If so, then what is the
 output? If not, then how can it be fixed?
 
 ```md
-<!-- Again from looking at the structure of its declaration, it holds the correct parameters to be recognized by both print_mass and print_distance.  -->
+<!-- Again they will not run because the attributes are still set as private.  -->
 ```
 
 ## Ruby Object Equality: Part I
