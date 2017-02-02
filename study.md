@@ -41,8 +41,13 @@ Does `proxima_centauri.print_distance` run? Why or why not? If so, then what is
 the output? If not, then how can it be fixed?
 
 ```md
-<!-- your answer here -->
+This code will run and the output will be: `The star is approximately 40170261586578.086 kilometers away.`
+
+This code runs because @distance_km is defined as an instance variable.
 ```
+
+http://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/instancevars.html
+http://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/localvars.html
 
 ## Ruby Object Variables: Part II
 
@@ -50,8 +55,10 @@ Does `proxima_centauri.print_mass` run? Why or why not? If so, then what is the
 output? If not, then how can it be fixed?
 
 ```md
-<!-- your answer here -->
+This code will not run because `mass_kg` is not defined as an instance variable. Judging from the reading I believe that means that it's scope is limited to the `initialize` method. By converting `mass_kg` to an instance variable we could get this to work.
 ```
+
+http://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/localvars.html
 
 ## Ruby Object Equality: Part I
 
@@ -66,16 +73,20 @@ nearest_star = the_sun
 Will modifying `sol` affect `the_sun`? Why or why not?
 
 ```md
-<!-- your answer here -->
+No, it will not affect `the_sun` because `sol` is a variable which repsents a seperate instance of the `Star` class. Modying `sol` will only inpact `sol`, not the `Star` class it shares with `the_sun`
 ```
+
+http://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/instancevars.html
 
 ## Ruby Object Equality: Part II
 
 Will modifying `the_sun` affect `nearest_star`? Why or why not?
 
 ```md
-<!-- your answer here -->
+Yes, modifying `the_sun` will affect `nearest_star` becuase it's value is set to whatever `the_sun` is.
 ```
+
+http://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/variables.html
 
 ## JavaScript Objects
 
@@ -87,7 +98,10 @@ Create an object literal named `vega` with the following properties and values.
 | solarMass | 2.135 |
 
 ```javascript
-// your answer here
+const vega = {
+  distance: 25.04,
+  solarMass: 2.135,
+};
 ```
 
 ## Ruby vs. JavaScript
@@ -96,5 +110,5 @@ If, in the above code, `var`, `let`, or `const` were removed and the code were
 executed as Ruby code, what type of object will be created?
 
 ```md
-<!-- your answer here -->
+If the JavaScript-specific syntax were removed, Ruby would produce a hash.
 ```
