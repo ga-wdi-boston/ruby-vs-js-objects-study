@@ -53,6 +53,7 @@ output? If not, then how can it be fixed?
 ```md
 It doesn't work because mass_kg is only defined localy.
 Output: NameError: undefined local variable or method `mass_kg' for #<Star:0x007fc777a1f4f0 @distance_km=40170261586578.086
+you would define it like this: @mass_kg = mass_solar * (1.99 * 10 ** 30)
 ```
 
 ## Ruby Object Equality: Part I
