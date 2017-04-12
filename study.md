@@ -39,11 +39,11 @@ proxima_centauri = Star.new(4.246, 0.123)
 
 Does `proxima_centauri.print_distance` run? Why or why not? If so, then what is
 the output? If not, then how can it be fixed?
-Yes. You'd need to run proxima_centauri.print_distance to now get the
-print_distance to be invoked.
+
 
 ```md
-<!-- your answer here -->
+Yes. You'd need to run proxima_centauri.print_distance to now get the
+print_distance to be invoked.
 ```
 
 ## Ruby Object Variables: Part II
@@ -89,7 +89,10 @@ Create an object literal named `vega` with the following properties and values.
 | solarMass | 2.135 |
 
 ```javascript
-// your answer here
+let vega = {
+    distance: 25.04,
+    solarMass: 2.135
+}
 ```
 
 ## Ruby vs. JavaScript
@@ -98,5 +101,5 @@ If, in the above code, `var`, `let`, or `const` were removed and the code were
 executed as Ruby code, what type of object will be created?
 
 ```md
-<!-- your answer here -->
+A hash
 ```
