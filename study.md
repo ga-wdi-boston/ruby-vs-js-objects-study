@@ -41,7 +41,9 @@ Does `proxima_centauri.print_distance` run? Why or why not? If so, then what is
 the output? If not, then how can it be fixed?
 
 ```md
-<!-- your answer here -->
+No. We have created the object but have not called any methods on it. To print
+the message we need to call the method.
+proxima_centauri.print_distance
 ```
 
 ## Ruby Object Variables: Part II
@@ -50,7 +52,7 @@ Does `proxima_centauri.print_mass` run? Why or why not? If so, then what is the
 output? If not, then how can it be fixed?
 
 ```md
-<!-- your answer here -->
+Same as above but call: proxima_centauri.print_mass
 ```
 
 ## Ruby Object Equality: Part I
@@ -66,7 +68,7 @@ nearest_star = the_sun
 Will modifying `sol` affect `the_sun`? Why or why not?
 
 ```md
-<!-- your answer here -->
+No. Sol is it's own instance of Star.  To different objects(object ids)
 ```
 
 ## Ruby Object Equality: Part II
@@ -74,7 +76,7 @@ Will modifying `sol` affect `the_sun`? Why or why not?
 Will modifying `the_sun` affect `nearest_star`? Why or why not?
 
 ```md
-<!-- your answer here -->
+Yes since the they are the same object.
 ```
 
 ## JavaScript Objects
@@ -87,7 +89,10 @@ Create an object literal named `vega` with the following properties and values.
 | solarMass | 2.135 |
 
 ```javascript
-// your answer here
+function vega ( distance, solarMass ) {
+  this.distance = distance
+  this.solarMass = solarMass
+}
 ```
 
 ## Ruby vs. JavaScript
@@ -96,5 +101,5 @@ If, in the above code, `var`, `let`, or `const` were removed and the code were
 executed as Ruby code, what type of object will be created?
 
 ```md
-<!-- your answer here -->
+I don't think it would create anything but errors.
 ```
