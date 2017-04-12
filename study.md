@@ -41,7 +41,8 @@ Does `proxima_centauri.print_distance` run? Why or why not? If so, then what is
 the output? If not, then how can it be fixed?
 
 ```md
-<!-- your answer here -->
+Yes, it runs because print_distance is a public method on the object Star that
+was used to create proxima_centauri
 ```
 
 ## Ruby Object Variables: Part II
@@ -50,7 +51,9 @@ Does `proxima_centauri.print_mass` run? Why or why not? If so, then what is the
 output? If not, then how can it be fixed?
 
 ```md
-<!-- your answer here -->
+No.  The print_mass is a public method but it is using mass_kg which is a local
+variable.  To fix print_mass, make mass_kg an instance variable and update the
+return to @mass_kg
 ```
 
 ## Ruby Object Equality: Part I
@@ -66,7 +69,7 @@ nearest_star = the_sun
 Will modifying `sol` affect `the_sun`? Why or why not?
 
 ```md
-<!-- your answer here -->
+No.  sol and the_sun are 2 distince instances of Star
 ```
 
 ## Ruby Object Equality: Part II
@@ -74,7 +77,8 @@ Will modifying `sol` affect `the_sun`? Why or why not?
 Will modifying `the_sun` affect `nearest_star`? Why or why not?
 
 ```md
-<!-- your answer here -->
+Yes, since nearest_star is pointing to the instance the_sun and wasn't created
+from the .new method
 ```
 
 ## JavaScript Objects
@@ -87,7 +91,10 @@ Create an object literal named `vega` with the following properties and values.
 | solarMass | 2.135 |
 
 ```javascript
-// your answer here
+const vega = {
+  distance: 25.04,
+  solarMass: 2.135
+}
 ```
 
 ## Ruby vs. JavaScript
@@ -96,5 +103,5 @@ If, in the above code, `var`, `let`, or `const` were removed and the code were
 executed as Ruby code, what type of object will be created?
 
 ```md
-<!-- your answer here -->
+it would be a Ruby Hash object
 ```
