@@ -39,6 +39,8 @@ proxima_centauri = Star.new(4.246, 0.123)
 
 Does `proxima_centauri.print_distance` run? Why or why not? If so, then what is
 the output? If not, then how can it be fixed?
+Yes. You'd need to run proxima_centauri.print_distance to now get the
+print_distance to be invoked.
 
 ```md
 <!-- your answer here -->
@@ -50,7 +52,7 @@ Does `proxima_centauri.print_mass` run? Why or why not? If so, then what is the
 output? If not, then how can it be fixed?
 
 ```md
-<!-- your answer here -->
+No it doesn't.  There is no visibility to the local variable, mass_kg, at the call site.
 ```
 
 ## Ruby Object Equality: Part I
@@ -66,7 +68,7 @@ nearest_star = the_sun
 Will modifying `sol` affect `the_sun`? Why or why not?
 
 ```md
-<!-- your answer here -->
+No as they do not have the same object ID
 ```
 
 ## Ruby Object Equality: Part II
@@ -74,7 +76,7 @@ Will modifying `sol` affect `the_sun`? Why or why not?
 Will modifying `the_sun` affect `nearest_star`? Why or why not?
 
 ```md
-<!-- your answer here -->
+yes as they have the same object ID
 ```
 
 ## JavaScript Objects
