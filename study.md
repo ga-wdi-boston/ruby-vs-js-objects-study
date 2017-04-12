@@ -41,7 +41,10 @@ Does `proxima_centauri.print_distance` run? Why or why not? If so, then what is
 the output? If not, then how can it be fixed?
 
 ```md
-<!-- your answer here -->
+Yes, when creating the proxima_centauri it added the distance_ly 4.246.
+then the @distance_km used that to get the distance in KM.  The print_distance
+has a puts function that puts in the @distance_km within its string, with The
+output of @distance_km= 40170261586578.086
 ```
 
 ## Ruby Object Variables: Part II
@@ -50,7 +53,8 @@ Does `proxima_centauri.print_mass` run? Why or why not? If so, then what is the
 output? If not, then how can it be fixed?
 
 ```md
-<!-- your answer here -->
+No, it does not have the @ for mass_kg so it wont run.  to fix the issue you will
+to add the @mass_kg for the key and the print_mass will need #{@mass_kg}
 ```
 
 ## Ruby Object Equality: Part I
@@ -66,7 +70,9 @@ nearest_star = the_sun
 Will modifying `sol` affect `the_sun`? Why or why not?
 
 ```md
-<!-- your answer here -->
+No, the sol is a different object then the_sun.  They may be under the same class
+but they will not affect each other if change or removed unless there is a method
+that uses both of them.
 ```
 
 ## Ruby Object Equality: Part II
@@ -74,7 +80,8 @@ Will modifying `sol` affect `the_sun`? Why or why not?
 Will modifying `the_sun` affect `nearest_star`? Why or why not?
 
 ```md
-<!-- your answer here -->
+Yes it will.  The nearest_star calls on 'the_sun' and if the value etc changes, it
+will affect the nearest_star.
 ```
 
 ## JavaScript Objects
@@ -87,7 +94,10 @@ Create an object literal named `vega` with the following properties and values.
 | solarMass | 2.135 |
 
 ```javascript
-// your answer here
+const vega = {
+  distance: 25.04,
+  solarMass: 2.135
+}
 ```
 
 ## Ruby vs. JavaScript
@@ -96,5 +106,5 @@ If, in the above code, `var`, `let`, or `const` were removed and the code were
 executed as Ruby code, what type of object will be created?
 
 ```md
-<!-- your answer here -->
+vega would be a hash with the following keys of distance: 25.04, solarMass: 2.135
 ```
