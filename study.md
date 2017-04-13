@@ -41,7 +41,7 @@ Does `proxima_centauri.print_distance` run? Why or why not? If so, then what is
 the output? If not, then how can it be fixed?
 
 ```md
-<!-- your answer here -->
+Yes it runs because @distance_km is an instance variable (valid within the scope of its instance) and as long as that value is references by its own method, then it will access to that value.
 ```
 
 ## Ruby Object Variables: Part II
@@ -50,7 +50,8 @@ Does `proxima_centauri.print_mass` run? Why or why not? If so, then what is the
 output? If not, then how can it be fixed?
 
 ```md
-<!-- your answer here -->
+This methid will not run. mass_kg is a local variable that cannot be access outside of the object even through a method call. The method can only access
+instance variables.
 ```
 
 ## Ruby Object Equality: Part I
@@ -66,7 +67,9 @@ nearest_star = the_sun
 Will modifying `sol` affect `the_sun`? Why or why not?
 
 ```md
-<!-- your answer here -->
+Modifying sol will not affect the sun because the constructor way of creating
+a new instance assigns a unique object id to it. Ruby uses unique object ids
+to know which object to update.
 ```
 
 ## Ruby Object Equality: Part II
@@ -74,7 +77,7 @@ Will modifying `sol` affect `the_sun`? Why or why not?
 Will modifying `the_sun` affect `nearest_star`? Why or why not?
 
 ```md
-<!-- your answer here -->
+Modifying the_sun object instance itself will affect the nearest_star because they share the same object id. And as stated above, this is how Ruby knows which object to update. However, if the_sun variable were reassigned a different value or object, nearest_star would be unaffected.
 ```
 
 ## JavaScript Objects
@@ -87,7 +90,10 @@ Create an object literal named `vega` with the following properties and values.
 | solarMass | 2.135 |
 
 ```javascript
-// your answer here
+const vega = {
+  distance: 25.04,
+  solarMass: 2.135
+}
 ```
 
 ## Ruby vs. JavaScript
@@ -96,5 +102,5 @@ If, in the above code, `var`, `let`, or `const` were removed and the code were
 executed as Ruby code, what type of object will be created?
 
 ```md
-<!-- your answer here -->
+Hash
 ```
