@@ -41,7 +41,12 @@ Does `proxima_centauri.print_distance` run? Why or why not? If so, then what is
 the output? If not, then how can it be fixed?
 
 ```md
-<!-- your answer here -->
+Yes, the output is:
+The star is approximately 40170261586578.086 kilometers away.
+
+It runs because print_distance is a defined method of the Star class. proxima_centauri
+is a new instance of the Star class and has all associated methods. It uses the
+distance_km property which is defined and passed when the class is initialized
 ```
 
 ## Ruby Object Variables: Part II
@@ -50,7 +55,13 @@ Does `proxima_centauri.print_mass` run? Why or why not? If so, then what is the
 output? If not, then how can it be fixed?
 
 ```md
-<!-- your answer here -->
+It does notr run because it requires the mass_kg variable which has not been
+defined. To fix, change the initialize method to this:
+
+def initialize(distance_ly, mass_solar)
+  @distance_km = distance_ly * 9_460_730_472_580.8
+  @mass_kg = mass_solar * (1.99 * 10 ** 30)
+end
 ```
 
 ## Ruby Object Equality: Part I
@@ -66,7 +77,8 @@ nearest_star = the_sun
 Will modifying `sol` affect `the_sun`? Why or why not?
 
 ```md
-<!-- your answer here -->
+No because the sol object and the_sun object reference two difference instances
+of the Star class. They would both have different object_ids
 ```
 
 ## Ruby Object Equality: Part II
@@ -74,7 +86,8 @@ Will modifying `sol` affect `the_sun`? Why or why not?
 Will modifying `the_sun` affect `nearest_star`? Why or why not?
 
 ```md
-<!-- your answer here -->
+I don't believe so. In JS, both would change - but in Ruby, they will have different
+object IDs and I don't think that changes to the_sun will effect nearest_star
 ```
 
 ## JavaScript Objects
@@ -87,7 +100,10 @@ Create an object literal named `vega` with the following properties and values.
 | solarMass | 2.135 |
 
 ```javascript
-// your answer here
+const vega = {
+  distance: 25.04,
+  solarMass: 2.135
+}
 ```
 
 ## Ruby vs. JavaScript
@@ -96,5 +112,5 @@ If, in the above code, `var`, `let`, or `const` were removed and the code were
 executed as Ruby code, what type of object will be created?
 
 ```md
-<!-- your answer here -->
+a hash?
 ```
