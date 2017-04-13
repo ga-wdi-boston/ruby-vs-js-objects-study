@@ -41,7 +41,7 @@ Does `proxima_centauri.print_distance` run? Why or why not? If so, then what is
 the output? If not, then how can it be fixed?
 
 ```md
-<!-- your answer here -->
+<!--They will not print because the attributes are private.-->
 ```
 
 ## Ruby Object Variables: Part II
@@ -50,7 +50,7 @@ Does `proxima_centauri.print_mass` run? Why or why not? If so, then what is the
 output? If not, then how can it be fixed?
 
 ```md
-<!-- your answer here -->
+<!-- Again they will not run because the attributes are still set as private.  -->
 ```
 
 ## Ruby Object Equality: Part I
@@ -66,7 +66,7 @@ nearest_star = the_sun
 Will modifying `sol` affect `the_sun`? Why or why not?
 
 ```md
-<!-- your answer here -->
+<!-- No it should not becuase it is all seperate fillins for the star object. So changing sol should only change sol. -->
 ```
 
 ## Ruby Object Equality: Part II
@@ -74,7 +74,7 @@ Will modifying `sol` affect `the_sun`? Why or why not?
 Will modifying `the_sun` affect `nearest_star`? Why or why not?
 
 ```md
-<!-- your answer here -->
+<!-- Yes it will effect the nearest_star, becuase nearest_star is comparing all of the objects declared under the star object. -->
 ```
 
 ## JavaScript Objects
@@ -87,8 +87,12 @@ Create an object literal named `vega` with the following properties and values.
 | solarMass | 2.135 |
 
 ```javascript
-// your answer here
+// let vega = {
+distance: 25.04,
+solarMass: 2.135,
+};
 ```
+<!-- I am still not 100% this is what you're asking for. If it is not can you give me the specific repo or document I should reference to review it? -->
 
 ## Ruby vs. JavaScript
 
@@ -96,5 +100,6 @@ If, in the above code, `var`, `let`, or `const` were removed and the code were
 executed as Ruby code, what type of object will be created?
 
 ```md
-<!-- your answer here -->
+<!--If I am correct it would just declare a variable in JS, becuase it didn't use class and didn't capitolize the Vega. -->
 ```
+<!-- Over all I feel good about this if what I am understanding is correct. If it is not it will definitely give me specific things to review.  -->
