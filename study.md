@@ -41,7 +41,8 @@ Does `proxima_centauri.print_distance` run? Why or why not? If so, then what is
 the output? If not, then how can it be fixed?
 
 ```md
-<!-- your answer here -->
+Yes, the method was defined inside the class and is accessible outside.
+output: @distance_km=40170261586578.086>
 ```
 
 ## Ruby Object Variables: Part II
@@ -50,7 +51,8 @@ Does `proxima_centauri.print_mass` run? Why or why not? If so, then what is the
 output? If not, then how can it be fixed?
 
 ```md
-<!-- your answer here -->
+No, mass is an equation and is not defined in the class. You could potentially
+set the mass using a setter.
 ```
 
 ## Ruby Object Equality: Part I
@@ -66,7 +68,7 @@ nearest_star = the_sun
 Will modifying `sol` affect `the_sun`? Why or why not?
 
 ```md
-<!-- your answer here -->
+No, they are independent and the_sun doesnt use the sol inside.
 ```
 
 ## Ruby Object Equality: Part II
@@ -74,8 +76,7 @@ Will modifying `sol` affect `the_sun`? Why or why not?
 Will modifying `the_sun` affect `nearest_star`? Why or why not?
 
 ```md
-<!-- your answer here -->
-```
+Yes, the nearest_star equates itself to the sun. Any changes would be effected.```
 
 ## JavaScript Objects
 
@@ -87,7 +88,10 @@ Create an object literal named `vega` with the following properties and values.
 | solarMass | 2.135 |
 
 ```javascript
-// your answer here
+let vega = {
+  distance: 25.04,
+  solarMass: 2.135
+}
 ```
 
 ## Ruby vs. JavaScript
@@ -96,5 +100,4 @@ If, in the above code, `var`, `let`, or `const` were removed and the code were
 executed as Ruby code, what type of object will be created?
 
 ```md
-<!-- your answer here -->
-```
+Constant```
