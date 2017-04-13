@@ -41,7 +41,9 @@ Does `proxima_centauri.print_distance` run? Why or why not? If so, then what is
 the output? If not, then how can it be fixed?
 
 ```md
-<!-- your answer here -->
+Yes it does because we are passsing in the object `Star.new` to it which defines
+a variable called `print_distance`. It's output is `The star is approximately 40170261586578.086 kilometers away.`,
+but it also puts out `nil`.
 ```
 
 ## Ruby Object Variables: Part II
@@ -50,7 +52,8 @@ Does `proxima_centauri.print_mass` run? Why or why not? If so, then what is the
 output? If not, then how can it be fixed?
 
 ```md
-<!-- your answer here -->
+The object `proxima_centauri.print_mass` does not run because `mass_kg` doesn't
+use the `@` symbol, so we can only use that variable inside that scope.
 ```
 
 ## Ruby Object Equality: Part I
@@ -66,7 +69,7 @@ nearest_star = the_sun
 Will modifying `sol` affect `the_sun`? Why or why not?
 
 ```md
-<!-- your answer here -->
+No, because they are their own instances of the object `Star`.
 ```
 
 ## Ruby Object Equality: Part II
@@ -74,7 +77,8 @@ Will modifying `sol` affect `the_sun`? Why or why not?
 Will modifying `the_sun` affect `nearest_star`? Why or why not?
 
 ```md
-<!-- your answer here -->
+No, because `nearest_star` only holds the values of `the_sun`. They aren't
+linked to each other; they are two different instances of the class `Star`.
 ```
 
 ## JavaScript Objects
@@ -87,7 +91,10 @@ Create an object literal named `vega` with the following properties and values.
 | solarMass | 2.135 |
 
 ```javascript
-// your answer here
+const vega = {
+  distance: 25.04,
+  solarMass: 2.135
+};
 ```
 
 ## Ruby vs. JavaScript
@@ -96,5 +103,5 @@ If, in the above code, `var`, `let`, or `const` were removed and the code were
 executed as Ruby code, what type of object will be created?
 
 ```md
-<!-- your answer here -->
+The object created will be a hash.
 ```
