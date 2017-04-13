@@ -41,7 +41,10 @@ Does `proxima_centauri.print_distance` run? Why or why not? If so, then what is
 the output? If not, then how can it be fixed?
 
 ```md
-<!-- your answer here -->
+Yes it runs because the @distance_km attribute was defined in the initialize
+method when the Star class was defined. This allows for the 'puts' method to
+print a valid string be printed on the terminal when an instance of
+proxima_centauri was created.
 ```
 
 ## Ruby Object Variables: Part II
@@ -50,7 +53,10 @@ Does `proxima_centauri.print_mass` run? Why or why not? If so, then what is the
 output? If not, then how can it be fixed?
 
 ```md
-<!-- your answer here -->
+This instance does not run because mass_kg was not properly defined as an instance
+variable in the initialize method of the Star parent class. Therefore the second
+argument of the proxima_centauri class instance cannot be properly passed and called upon when creating an instance of proxima_centauri.
+
 ```
 
 ## Ruby Object Equality: Part I
@@ -66,7 +72,9 @@ nearest_star = the_sun
 Will modifying `sol` affect `the_sun`? Why or why not?
 
 ```md
-<!-- your answer here -->
+Modifying 'sol' will not affext 'the_sun' because it is a seperate class instance
+of Star. Both instances were made independently from the Star parent class and
+therefore modifying either will not affect the other.
 ```
 
 ## Ruby Object Equality: Part II
@@ -74,7 +82,10 @@ Will modifying `sol` affect `the_sun`? Why or why not?
 Will modifying `the_sun` affect `nearest_star`? Why or why not?
 
 ```md
-<!-- your answer here -->
+Modifying the_sun will not affect nearest_star because once the nearest_star
+is created it creates a seperate entry in memory that is in a different location
+from where the_sun value is stored.
+
 ```
 
 ## JavaScript Objects
@@ -87,7 +98,10 @@ Create an object literal named `vega` with the following properties and values.
 | solarMass | 2.135 |
 
 ```javascript
-// your answer here
+const vega = {
+  distance: 25.04,
+  solarMass: 2.135
+}
 ```
 
 ## Ruby vs. JavaScript
@@ -96,5 +110,5 @@ If, in the above code, `var`, `let`, or `const` were removed and the code were
 executed as Ruby code, what type of object will be created?
 
 ```md
-<!-- your answer here -->
+A hash object would be created.
 ```
