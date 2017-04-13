@@ -22,7 +22,7 @@ Assume that we have the following class and an instance of it to work with.
 class Star
   def initialize(distance_ly, mass_solar)
     @distance_km = distance_ly * 9_460_730_472_580.8
-    mass_kg = mass_solar * (1.99 * 10 ** 30)
+    @mass_kg = mass_solar * (1.99 * 10 ** 30)
   end
 
   def print_distance
@@ -30,7 +30,7 @@ class Star
   end
 
   def print_mass
-    puts "The star has a mass of approximately #{mass_kg} kilograms."
+    puts "The star has a mass of approximately #{@mass_kg} kilograms."
   end
 end
 
@@ -41,7 +41,9 @@ Does `proxima_centauri.print_distance` run? Why or why not? If so, then what is
 the output? If not, then how can it be fixed?
 
 ```md
-<!-- your answer here -->
+It does run, it returns:
+
+The star is approximately 40170261586578.086 kilometers away.
 ```
 
 ## Ruby Object Variables: Part II
@@ -50,7 +52,8 @@ Does `proxima_centauri.print_mass` run? Why or why not? If so, then what is the
 output? If not, then how can it be fixed?
 
 ```md
-<!-- your answer here -->
+No we would need to change the instances of "mass_kg" to "@mass_kg" then it retunrs:
+The star has a mass of approximately 2.4477e+29 kilograms.
 ```
 
 ## Ruby Object Equality: Part I
@@ -66,7 +69,8 @@ nearest_star = the_sun
 Will modifying `sol` affect `the_sun`? Why or why not?
 
 ```md
-<!-- your answer here -->
+No because both of them have been assigned new object ID's so they're pointing
+to seperate things
 ```
 
 ## Ruby Object Equality: Part II
@@ -74,7 +78,8 @@ Will modifying `sol` affect `the_sun`? Why or why not?
 Will modifying `the_sun` affect `nearest_star`? Why or why not?
 
 ```md
-<!-- your answer here -->
+Yes b/c nearest_star points to the same object in memory(aka has the same object
+id)
 ```
 
 ## JavaScript Objects
@@ -87,7 +92,10 @@ Create an object literal named `vega` with the following properties and values.
 | solarMass | 2.135 |
 
 ```javascript
-// your answer here
+const vega = {
+  distance: 25.04,
+  solarMass: 2.135
+}
 ```
 
 ## Ruby vs. JavaScript
@@ -96,5 +104,6 @@ If, in the above code, `var`, `let`, or `const` were removed and the code were
 executed as Ruby code, what type of object will be created?
 
 ```md
-<!-- your answer here -->
+an object literal star, so it won't share the methods of somthing created with
+teh new Star constructor class
 ```
