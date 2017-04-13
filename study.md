@@ -41,7 +41,9 @@ Does `proxima_centauri.print_distance` run? Why or why not? If so, then what is
 the output? If not, then how can it be fixed?
 
 ```md
-<!-- your answer here -->
+Yes, because print_distance is a instant method and instant method is public by default.
+Also, the variable distance_km is defined as instant variable which is able to be used in the same class methods.
+The result is 'The star is approximately 40170261586578.086 kilometers away.'
 ```
 
 ## Ruby Object Variables: Part II
@@ -50,7 +52,9 @@ Does `proxima_centauri.print_mass` run? Why or why not? If so, then what is the
 output? If not, then how can it be fixed?
 
 ```md
-<!-- your answer here -->
+No, because the variable mass_kg is a local variable in method initialize scope.
+Other methods in star class is not able to use. Define the variable as instant variable, then
+the issue will be fixed.
 ```
 
 ## Ruby Object Equality: Part I
@@ -66,7 +70,7 @@ nearest_star = the_sun
 Will modifying `sol` affect `the_sun`? Why or why not?
 
 ```md
-<!-- your answer here -->
+No, 'sol' and 'the_sun' are totally different object.
 ```
 
 ## Ruby Object Equality: Part II
@@ -74,7 +78,7 @@ Will modifying `sol` affect `the_sun`? Why or why not?
 Will modifying `the_sun` affect `nearest_star`? Why or why not?
 
 ```md
-<!-- your answer here -->
+Yes, the variable 'the_sun' and 'nearest_star' are pointing to the same object.
 ```
 
 ## JavaScript Objects
@@ -87,7 +91,10 @@ Create an object literal named `vega` with the following properties and values.
 | solarMass | 2.135 |
 
 ```javascript
-// your answer here
+let vega = {
+  distance: 25.04,
+  solarMass: 2.135
+};
 ```
 
 ## Ruby vs. JavaScript
@@ -96,5 +103,5 @@ If, in the above code, `var`, `let`, or `const` were removed and the code were
 executed as Ruby code, what type of object will be created?
 
 ```md
-<!-- your answer here -->
+Hash
 ```
