@@ -41,7 +41,9 @@ Does `proxima_centauri.print_distance` run? Why or why not? If so, then what is
 the output? If not, then how can it be fixed?
 
 ```md
-<!-- your answer here -->
+It does run and the output is:
+The star is approximately 40170261586578.086 kilometers away.
+print_distance is a method of the class Star so the .new method that creates the object star proxima_centauri can access the methods defined in the class Star.
 ```
 
 ## Ruby Object Variables: Part II
@@ -50,7 +52,9 @@ Does `proxima_centauri.print_mass` run? Why or why not? If so, then what is the
 output? If not, then how can it be fixed?
 
 ```md
-<!-- your answer here -->
+No. the error message is: NameError: undefined local variable or method `mass_kg'.
+
+the print_mass method does not work because mass_kg is not declared as an instance variable with @ and therefore cannot be accessed outside of the initialize method.
 ```
 
 ## Ruby Object Equality: Part I
@@ -66,7 +70,7 @@ nearest_star = the_sun
 Will modifying `sol` affect `the_sun`? Why or why not?
 
 ```md
-<!-- your answer here -->
+no, they are different objects
 ```
 
 ## Ruby Object Equality: Part II
@@ -74,7 +78,7 @@ Will modifying `sol` affect `the_sun`? Why or why not?
 Will modifying `the_sun` affect `nearest_star`? Why or why not?
 
 ```md
-<!-- your answer here -->
+no, instansiating the_sun as a new star and then instansiating nearest_star to the_sun will give both objects the same id. when you rerun the .new method on the sun to change it, it generates a new ID and the data associated with the_sun is different than what is associated with nearest_star.
 ```
 
 ## JavaScript Objects
@@ -87,7 +91,10 @@ Create an object literal named `vega` with the following properties and values.
 | solarMass | 2.135 |
 
 ```javascript
-// your answer here
+const objLiteral = {
+  distance: 25.04,
+  solarMass: 2.135
+}
 ```
 
 ## Ruby vs. JavaScript
@@ -96,5 +103,6 @@ If, in the above code, `var`, `let`, or `const` were removed and the code were
 executed as Ruby code, what type of object will be created?
 
 ```md
-<!-- your answer here -->
+it does work, and it creates hashes:
+{:distance=>25.04, :solarMass=>2.135}
 ```
