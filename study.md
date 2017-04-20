@@ -22,7 +22,7 @@ Assume that we have the following class and an instance of it to work with.
 class Star
   def initialize(distance_ly, mass_solar)
     @distance_km = distance_ly * 9_460_730_472_580.8
-    mass_kg = mass_solar * (1.99 * 10 ** 30)
+    @mass_kg = mass_solar * (1.99 * 10 ** 30)
   end
 
   def print_distance
@@ -30,7 +30,7 @@ class Star
   end
 
   def print_mass
-    puts "The star has a mass of approximately #{mass_kg} kilograms."
+    puts "The star has a mass of approximately #{@mass_kg} kilograms."
   end
 end
 
@@ -41,7 +41,7 @@ Does `proxima_centauri.print_distance` run? Why or why not? If so, then what is
 the output? If not, then how can it be fixed?
 
 ```md
-<!-- your answer here -->
+Yes it should, it inherits the properties of the Star object.
 ```
 
 ## Ruby Object Variables: Part II
@@ -50,7 +50,8 @@ Does `proxima_centauri.print_mass` run? Why or why not? If so, then what is the
 output? If not, then how can it be fixed?
 
 ```md
-<!-- your answer here -->
+Nope! But if you add @ signs in the def and in the initialization that should fix it.
+You're making the variable an instance variable in that case.
 ```
 
 ## Ruby Object Equality: Part I
@@ -66,7 +67,7 @@ nearest_star = the_sun
 Will modifying `sol` affect `the_sun`? Why or why not?
 
 ```md
-<!-- your answer here -->
+No, both of these objects are created as separate object.
 ```
 
 ## Ruby Object Equality: Part II
@@ -74,7 +75,10 @@ Will modifying `sol` affect `the_sun`? Why or why not?
 Will modifying `the_sun` affect `nearest_star`? Why or why not?
 
 ```md
-<!-- your answer here -->
+No, setting nearest_star to the_sun points nearest_star to the data that was created
+with the_sun but when you redfine the sun it just creates new data and leaves nearest_star
+pointing at the original data. (I think) update: solution branch says I'm wrong, can we
+talke about this?
 ```
 
 ## JavaScript Objects
@@ -87,7 +91,10 @@ Create an object literal named `vega` with the following properties and values.
 | solarMass | 2.135 |
 
 ```javascript
-// your answer here
+const vega = {
+  distance: 25.04
+  solarMass: 2.135
+}
 ```
 
 ## Ruby vs. JavaScript
@@ -96,5 +103,5 @@ If, in the above code, `var`, `let`, or `const` were removed and the code were
 executed as Ruby code, what type of object will be created?
 
 ```md
-<!-- your answer here -->
+You'd be creating a hash using hash literal notation. 
 ```
