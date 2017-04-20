@@ -20,9 +20,10 @@ Assume that we have the following class and an instance of it to work with.
 
 ```ruby
 class Star
+  attr_accessor :distance_km
   def initialize(distance_ly, mass_solar)
     @distance_km = distance_ly * 9_460_730_472_580.8
-    mass_kg = mass_solar * (1.99 * 10 ** 30)
+    @mass_kg = mass_solar * (1.99 * 10 ** 30)
   end
 
   def print_distance
@@ -30,7 +31,7 @@ class Star
   end
 
   def print_mass
-    puts "The star has a mass of approximately #{mass_kg} kilograms."
+    puts "The star has a mass of approximately #{@mass_kg} kilograms."
   end
 end
 
@@ -41,7 +42,9 @@ Does `proxima_centauri.print_distance` run? Why or why not? If so, then what is
 the output? If not, then how can it be fixed?
 
 ```md
-<!-- your answer here -->
+It does run. print_distance is a method we have defined in the Star class.
+proxima_centauri is a Star and has access to that method.
+
 ```
 
 ## Ruby Object Variables: Part II
@@ -50,7 +53,9 @@ Does `proxima_centauri.print_mass` run? Why or why not? If so, then what is the
 output? If not, then how can it be fixed?
 
 ```md
-<!-- your answer here -->
+it does not run. Because mass_kg is not an instance variable.
+
+We put the @ symbol in front of mass_kg on line 25 and on line 33
 ```
 
 ## Ruby Object Equality: Part I
@@ -66,7 +71,8 @@ nearest_star = the_sun
 Will modifying `sol` affect `the_sun`? Why or why not?
 
 ```md
-<!-- your answer here -->
+It will not. sol and the_sun are seperate objects. They inherit from the class Star
+but not from each other.
 ```
 
 ## Ruby Object Equality: Part II
@@ -74,7 +80,11 @@ Will modifying `sol` affect `the_sun`? Why or why not?
 Will modifying `the_sun` affect `nearest_star`? Why or why not?
 
 ```md
-<!-- your answer here -->
+It will, because nearest_star is a variable that points to the object called
+the_sun.
+
+http://stackoverflow.com/questions/1872110/is-ruby-pass-by-reference-or-by-value
+I tested this in pry
 ```
 
 ## JavaScript Objects
@@ -87,7 +97,10 @@ Create an object literal named `vega` with the following properties and values.
 | solarMass | 2.135 |
 
 ```javascript
-// your answer here
+const vega = {
+  distance: 25.04,
+  solarMass: 2.135
+}
 ```
 
 ## Ruby vs. JavaScript
@@ -96,5 +109,5 @@ If, in the above code, `var`, `let`, or `const` were removed and the code were
 executed as Ruby code, what type of object will be created?
 
 ```md
-<!-- your answer here -->
+A hash
 ```
