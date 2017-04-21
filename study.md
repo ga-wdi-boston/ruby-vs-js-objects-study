@@ -41,7 +41,7 @@ Does `proxima_centauri.print_distance` run? Why or why not? If so, then what is
 the output? If not, then how can it be fixed?
 
 ```md
-<!-- your answer here -->
+The method runs with the output 'The star is approximately 40170261586578.086 kilometers away.'
 ```
 
 ## Ruby Object Variables: Part II
@@ -50,7 +50,7 @@ Does `proxima_centauri.print_mass` run? Why or why not? If so, then what is the
 output? If not, then how can it be fixed?
 
 ```md
-<!-- your answer here -->
+The method will not run because there is no '@' in front of mass_kg, preventing mass_kg from being instantiated as an object variable
 ```
 
 ## Ruby Object Equality: Part I
@@ -66,7 +66,7 @@ nearest_star = the_sun
 Will modifying `sol` affect `the_sun`? Why or why not?
 
 ```md
-<!-- your answer here -->
+No. While both sol and the_sun have the same values, they are not pointed to the same data. Each vairable points to a distinct data value which happens to be equivalent
 ```
 
 ## Ruby Object Equality: Part II
@@ -74,7 +74,7 @@ Will modifying `sol` affect `the_sun`? Why or why not?
 Will modifying `the_sun` affect `nearest_star`? Why or why not?
 
 ```md
-<!-- your answer here -->
+No, as nearest_star is not a pointer being created at the_sun data, it is merely copying the_sun for its own data, then storing this in a unique location.
 ```
 
 ## JavaScript Objects
@@ -87,7 +87,7 @@ Create an object literal named `vega` with the following properties and values.
 | solarMass | 2.135 |
 
 ```javascript
-// your answer here
+let vega = new star(25.04, 2.135)
 ```
 
 ## Ruby vs. JavaScript
@@ -96,5 +96,5 @@ If, in the above code, `var`, `let`, or `const` were removed and the code were
 executed as Ruby code, what type of object will be created?
 
 ```md
-<!-- your answer here -->
+the code would fail to to syntactic differences. After a successful refactor, it would create a star per the specifications.
 ```
