@@ -41,7 +41,9 @@ Does `proxima_centauri.print_distance` run? Why or why not? If so, then what is
 the output? If not, then how can it be fixed?
 
 ```md
-<!-- your answer here -->
+Yes, `proxima_centauri.print_distance' will run because print_distance includes
+an initialized instance variable, @distance_km. The output will be a string,
+"The star is approximately 40170261586578.086 kilometers away."
 ```
 
 ## Ruby Object Variables: Part II
@@ -50,7 +52,10 @@ Does `proxima_centauri.print_mass` run? Why or why not? If so, then what is the
 output? If not, then how can it be fixed?
 
 ```md
-<!-- your answer here -->
+No, 'proxima_centauri.print_mass' will not run because it includes a variable
+that has not ben initialized as an instance variable. To fix this, you could
+add an '@' symbol before mass_kg, like the following:
+@mass_kg = mass_solar * (1.99 * 10 ** 30).
 ```
 
 ## Ruby Object Equality: Part I
@@ -66,7 +71,8 @@ nearest_star = the_sun
 Will modifying `sol` affect `the_sun`? Why or why not?
 
 ```md
-<!-- your answer here -->
+No, modifying 'sol' will not affect 'the_sun' because they are two different
+instances (objects) of the Star class.
 ```
 
 ## Ruby Object Equality: Part II
@@ -74,7 +80,8 @@ Will modifying `sol` affect `the_sun`? Why or why not?
 Will modifying `the_sun` affect `nearest_star`? Why or why not?
 
 ```md
-<!-- your answer here -->
+Yes, modifying 'the_sun' will affect 'nearest_star' because both 'the_sun' and
+'nearest_star' point to the same instance (object) of the Star class.
 ```
 
 ## JavaScript Objects
@@ -87,7 +94,10 @@ Create an object literal named `vega` with the following properties and values.
 | solarMass | 2.135 |
 
 ```javascript
-// your answer here
+const vega = {
+  distance: 25.04,
+  solarMass: 2.135
+};
 ```
 
 ## Ruby vs. JavaScript
@@ -96,5 +106,5 @@ If, in the above code, `var`, `let`, or `const` were removed and the code were
 executed as Ruby code, what type of object will be created?
 
 ```md
-<!-- your answer here -->
+hash, with :distance and :solarMass symbols as keys. 
 ```
