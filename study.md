@@ -42,6 +42,7 @@ the output? If not, then how can it be fixed?
 
 ```md
 <!-- your answer here -->
+It does print, the output is The star is approximately 40170261586578.086 kilometers away
 ```
 
 ## Ruby Object Variables: Part II
@@ -51,6 +52,10 @@ output? If not, then how can it be fixed?
 
 ```md
 <!-- your answer here -->
+It doesn't work, because the instance variable mass_kg hasn't been initialized.
+To fix it we would have to set mass_kg as an instance variable using @
+in the initializer or use a getter and setter with attr
+(or initialize it in a different method as a setter and getter)
 ```
 
 ## Ruby Object Equality: Part I
@@ -67,6 +72,8 @@ Will modifying `sol` affect `the_sun`? Why or why not?
 
 ```md
 <!-- your answer here -->
+No, we are creating new instances for both sol and the_sun using the class of Star.
+In other words sol and the_sun are both tied to Star but not with each other
 ```
 
 ## Ruby Object Equality: Part II
@@ -75,6 +82,8 @@ Will modifying `the_sun` affect `nearest_star`? Why or why not?
 
 ```md
 <!-- your answer here -->
+Yes, nearest_star is a variable that is being assigned to the instance the_sun
+which is pointing to the star class
 ```
 
 ## JavaScript Objects
@@ -88,6 +97,10 @@ Create an object literal named `vega` with the following properties and values.
 
 ```javascript
 // your answer here
+const vega = {
+  distance: 25.04,
+  solarMass: 2.135
+}
 ```
 
 ## Ruby vs. JavaScript
@@ -97,4 +110,5 @@ executed as Ruby code, what type of object will be created?
 
 ```md
 <!-- your answer here -->
+Hash
 ```
