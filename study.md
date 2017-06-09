@@ -42,6 +42,7 @@ the output? If not, then how can it be fixed?
 
 ```md
 <!-- your answer here -->
+Yup it runs. It says The star is approximately 40170261586578.086 kilometers away.
 ```
 
 ## Ruby Object Variables: Part II
@@ -51,6 +52,7 @@ output? If not, then how can it be fixed?
 
 ```md
 <!-- your answer here -->
+Nope. Doesn't run because mass_kg isn't defined. Need @ symbol.
 ```
 
 ## Ruby Object Equality: Part I
@@ -67,6 +69,7 @@ Will modifying `sol` affect `the_sun`? Why or why not?
 
 ```md
 <!-- your answer here -->
+Nah they're two diff objects bro.
 ```
 
 ## Ruby Object Equality: Part II
@@ -75,6 +78,7 @@ Will modifying `the_sun` affect `nearest_star`? Why or why not?
 
 ```md
 <!-- your answer here -->
+No, if you change it after it's been initialized, nearest_star wouldn't know.
 ```
 
 ## JavaScript Objects
@@ -88,6 +92,10 @@ Create an object literal named `vega` with the following properties and values.
 
 ```javascript
 // your answer here
+const vega {
+  distance: 25.04,
+  solarMaass: 2.135
+}
 ```
 
 ## Ruby vs. JavaScript
@@ -97,4 +105,5 @@ executed as Ruby code, what type of object will be created?
 
 ```md
 <!-- your answer here -->
+Hash
 ```
